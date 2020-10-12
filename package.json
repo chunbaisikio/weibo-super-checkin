@@ -1,0 +1,15 @@
+{
+  "name": "weibo-super-checkin",
+  "version": "1.0.0",
+  "description": "微博超话自动签到",
+  "main": "index.js",
+  "repository": "https://github.com/Tsuk1ko/weibo-super-checkin",
+  "author": "神代綺凜 <i@loli.best>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}

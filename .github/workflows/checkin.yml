@@ -1,0 +1,20 @@
+name: Check-in
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 每天早上 8:00
+
+jobs:
+  checkin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Install dependencies
+        run: yarn install
+      - name: Check-in
+        env:
+          COOKIE: ${{ secrets.COOKIE }}
+        run: yarn start
